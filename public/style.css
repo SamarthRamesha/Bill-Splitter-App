@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f0e6;
+    color: #4b2e1e;
+    padding: 20px;
+  }
+  
+  h1, h2, h3 {
+    color: #3a1f0f;
+  }
+  
+  input, textarea {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #b57f50;
+    border-radius: 5px;
+    background-color: #fff8f0;
+  }
+  
+  input[type="submit"] {
+    background-color: #6d3b1f;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #572e17;
+  }
