@@ -16,3 +16,4 @@ EXPOSE 8080
 
 # Run your start.sh script to launch the server
 CMD ["./start.sh"]
+CMD ["./cgi-bin/split.cgi"]
