@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Bill Splitter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Bill Splitter</h1>
+  <form action="../cgi-bin/split.cgi" method="post">
+    <h2>Total Bill Amount</h2>
+    <input type="number" name="total" required><br><br>
+
+    <h2>Select Split Mode</h2>
+
+    <!-- MANUAL SPLIT -->
+    <h3>Manual Split</h3>
+    <input type="hidden" name="mode" value="manual">
+    <label>Number of People:</label>
+    <input type="number" name="manual_count" min="1"><br><br>
+
+    <!-- We'll ask for names and percentages in the CGI program via repeated fields -->
+    <p>Enter names and percentages below (name1=..., percent1=..., etc.)</p>
+    <textarea name="manual_data" rows="5" cols="40" placeholder="e.g.&#10;Alice=50&#10;Bob=50"></textarea><br><br>
+
+    <hr>
+
+    <!-- SMART SPLIT -->
+    <h3>Smart Split</h3>
+    <input type="hidden" name="mode" value="smart">
+    <label>Number of People:</label>
+    <input type="number" name="smart_count" min="1"><br><br>
+
+    <p>Enter names and incomes below (name1=..., income1=..., etc.)</p>
+    <textarea name="smart_data" rows="5" cols="40" placeholder="e.g.&#10;Alice=25000&#10;Bob=10000"></textarea><br><br>
+
+    <input type="submit" value="Split Bill">
+  </form>
+</body>
+</html>
