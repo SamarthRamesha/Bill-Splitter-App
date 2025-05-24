@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: bill-splitter
+    env: static
+    buildCommand: make
+    staticPublishPath: public
+    routes:
+      - type: rewrite
+        source: /cgi-bin/*
+        destination: /cgi-bin/split.cgi
